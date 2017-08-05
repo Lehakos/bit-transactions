@@ -1,5 +1,13 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@import 'normalize.css/normalize';
+@import 'shared/vars.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-1;
+  color: #333;
 }

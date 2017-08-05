@@ -1,0 +1,32 @@
+@import 'shared/vars.scss';
+
+.btn {
+  border: none;
+  padding: 0 30px;
+
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+
+  background-color: transparent;
+  border-radius: $bdrds;
+  cursor: pointer;
+
+  transition: background-color .3s;
+
+  &_primary {
+    background-color: $color-2;
+
+    &:hover {
+      background-color: darken($color-2, 10);
+    }
+  }
+
+  &_danger {
+    background-color: $color-3;
+
+    &:hover {
+      background-color: darken($color-3, 10);
+    }
+  }
+}

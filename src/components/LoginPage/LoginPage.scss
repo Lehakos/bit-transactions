@@ -1,0 +1,18 @@
+@import 'shared/vars.scss';
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background: $color-1;
+
+  &__form {
+    width: 320px;
+    padding: 20px;
+
+    background: #fff;
+    border-radius: $bdrds;
+  }
+}

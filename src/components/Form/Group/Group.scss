@@ -1,0 +1,22 @@
+.form-group {
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_horizontal {
+    display: flex;
+
+    > * {
+      flex-grow: 1;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

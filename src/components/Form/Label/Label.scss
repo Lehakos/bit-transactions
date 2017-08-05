@@ -1,0 +1,10 @@
+.label {
+  display: block;
+
+  &__text {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 14px;
+  }
+}
