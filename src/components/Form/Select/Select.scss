@@ -1,0 +1,9 @@
+@import '../_styles';
+
+.select {
+  @extend %base-field;
+
+  &__placeholder {
+    display: none;
+  }
+}

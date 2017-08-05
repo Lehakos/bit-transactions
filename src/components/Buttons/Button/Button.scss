@@ -1,6 +1,18 @@
 @import 'shared/vars.scss';
 
 .btn {
+  @mixin makeTheme($color) {
+    background-color: $color;
+
+    &:hover {
+      background-color: darken($color, 5);
+    }
+
+    &:active {
+      background-color: darken($color, 10);
+    }
+  }
+
   border: none;
   padding: 0 30px;
 
@@ -15,18 +27,10 @@
   transition: background-color .3s;
 
   &_primary {
-    background-color: $color-2;
-
-    &:hover {
-      background-color: darken($color-2, 10);
-    }
+    @include makeTheme($color-2);
   }
 
   &_danger {
-    background-color: $color-3;
-
-    &:hover {
-      background-color: darken($color-3, 10);
-    }
+    @include makeTheme($color-3);
   }
 }

@@ -4,11 +4,11 @@ import cn from 'classnames';
 
 import './Button.css';
 
-const Button = ({ tag: Wrapper, type, children }) => {
+const Button = ({ tag: Wrapper, theme, children }) => {
   const classNames = cn({
     btn: true,
-    btn_primary: type === 'primary',
-    btn_danger: type === 'danger',
+    btn_primary: theme === 'primary',
+    btn_danger: theme === 'danger',
   });
 
   return (
@@ -20,13 +20,13 @@ const Button = ({ tag: Wrapper, type, children }) => {
 
 Button.defaultProps = {
   tag: 'button',
-  type: 'primary',
+  theme: 'primary',
 };
 
 Button.propTypes = {
   children: PropTypes.node,
   tag: PropTypes.oneOf(['a', 'button']),
-  type: PropTypes.oneOf(['primary', 'danger']),
+  theme: PropTypes.oneOf(['primary', 'danger']),
 };
 
 export default Button;

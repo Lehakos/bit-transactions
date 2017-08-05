@@ -1,13 +1,5 @@
-@import 'shared/vars.scss';
+@import '../_styles';
 
 .input {
-  width: 100%;
-  height: 30px;
-  padding: 0 10px;
-  border: 1px solid #aaa;
-
-  color: #333;
-
-  border-radius: $bdrds;
-  background: none;
+  @extend %base-field;
 }

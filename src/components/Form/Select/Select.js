@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Select.css';
+
 const Select = ({ placeholder, value, items, ...rest }) => {
   return (
     <select
+      className="select"
       defaultValue={value || 'placeholder'}
       {...rest}
     >
@@ -11,6 +14,7 @@ const Select = ({ placeholder, value, items, ...rest }) => {
         !!placeholder &&
         <option
           value="placeholder"
+          className="select__placeholder"
           disabled
         >
           {placeholder}
