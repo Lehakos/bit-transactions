@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 
-import { Group, Input, Label, Select } from '../Form';
-import Button from '../Buttons';
-import Container from '../Container';
+import { Group, Input, Label, Select } from '../../components/Form';
+import Button from '../../components/Buttons';
+import Container from '../../components/Container';
+import BaseLayout from '../../components/Layouts';
 
 const banks = [
   {
@@ -19,10 +20,10 @@ const banks = [
   },
 ];
 
-class TransactionPage extends PureComponent {
+class NewTransactionPage extends PureComponent {
   render() {
     return (
-      <div>
+      <BaseLayout>
         <Container>
           <form>
             <Group horizontal>
@@ -48,9 +49,9 @@ class TransactionPage extends PureComponent {
             </Group>
           </form>
         </Container>
-      </div>
+      </BaseLayout>
     );
   }
 }
 
-export default TransactionPage;
+export default NewTransactionPage;

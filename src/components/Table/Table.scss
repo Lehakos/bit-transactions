@@ -1,0 +1,18 @@
+.table {
+  %base-cell {
+    padding: 10px;
+    border: 1px solid #999;
+  }
+
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  &__head-cell {
+    @extend %base-cell;
+  }
+
+  &__cell {
+    @extend %base-cell;
+  }
+}

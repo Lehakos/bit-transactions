@@ -1,0 +1,36 @@
+@import 'shared/_vars';
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  &__item {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: background .3s;
+
+    &:hover:not(.menu__link_active) {
+      background: rgba(255, 255, 255, .3);
+    }
+
+    &_active {
+      background: rgba(255, 255, 255, .6);
+
+      cursor: default;
+    }
+  }
+}

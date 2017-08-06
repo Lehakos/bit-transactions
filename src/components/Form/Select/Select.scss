@@ -3,6 +3,14 @@
 .select {
   @extend %base-field;
 
+  &_valid {
+    border-color: $color-1;
+  }
+
+  &_invalid {
+    border-color: $color-3;
+  }
+
   &__placeholder {
     display: none;
   }

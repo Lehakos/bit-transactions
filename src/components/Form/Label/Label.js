@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Label.css';
 
-const Label = ({ children, text, ...rest }) => {
+const Label = ({ children, text, error, ...rest }) => {
   return (
     <label {...rest}>
       {
@@ -11,12 +11,17 @@ const Label = ({ children, text, ...rest }) => {
         <span className="label__text">{text}</span>
       }
       {Children.toArray(children)}
+      {
+        !!error &&
+        <span className="label__error">{error}</span>
+      }
     </label>
   );
 };
 
 Label.propTypes = {
   children: PropTypes.node,
+  error: PropTypes.string,
   text: PropTypes.string,
 };
 
