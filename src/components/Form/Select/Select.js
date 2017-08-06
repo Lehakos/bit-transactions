@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
 import './Select.css';
 
-const Select = ({ placeholder, value, items, ...rest }) => {
+const Select = ({ placeholder, valid, invalid, value, items, ...rest }) => {
+  const classNames = cn({
+    select: true,
+    select_valid: valid,
+    select_invalid: invalid,
+  });
+
   return (
     <select
-      className="select"
+      className={classNames}
       defaultValue={value || 'placeholder'}
       {...rest}
     >
@@ -35,6 +42,8 @@ const Select = ({ placeholder, value, items, ...rest }) => {
 Select.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string,
+  valid: PropTypes.bool,
+  invalid: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string.isRequired,
     label: PropTypes.string,

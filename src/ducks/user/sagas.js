@@ -1,5 +1,5 @@
 import { delay } from 'redux-saga';
-import { call, put, takeLatest, takeEvery } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 
 import * as api from '../../api';
 
@@ -8,7 +8,7 @@ import * as actions from './actions';
 
 export function* login({ payload }) {
   try {
-    yield call(delay, 500);
+    yield call(delay, 500); // имитируем задержку
     const { data } = yield call(api.login, payload);
 
     if (!data.success) {
@@ -25,7 +25,7 @@ export function* login({ payload }) {
 
 export function* logout() {
   try {
-    yield call(delay, 500);
+    yield call(delay, 500); // имитируем задержку
     const { data } = yield call(api.logout);
 
     if (!data.success) {

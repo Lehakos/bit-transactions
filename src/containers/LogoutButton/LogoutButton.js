@@ -16,8 +16,10 @@ class LogoutButton extends PureComponent {
   }
 
   render() {
+    const { logout, ...props } = this.props;
+
     return (
-      <Button onClick={this.onClick} {...this.props}>
+      <Button onClick={this.onClick} {...props}>
         выйти
       </Button>
     );

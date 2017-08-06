@@ -7,9 +7,7 @@ import { Group } from '../../components/Form';
 import { InputRedux } from '../../components/Form/Redux';
 import Button from '../../components/Buttons';
 
-import {
-  actions as userActions,
-} from '../../ducks/user';
+import { actions as userActions } from '../../ducks/user';
 import { required, email } from '../../shared/validate-rules';
 
 class LoginForm extends PureComponent {
