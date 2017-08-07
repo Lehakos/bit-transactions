@@ -1,8 +1,8 @@
-let db;
+let db = localStorage.getItem('db');
 
-try {
-  db = JSON.parse(localStorage.getItem('db'));
-} catch (err) {
+if (db && typeof db === 'string') {
+  db = JSON.parse(db);
+} else {
   db = {
     transactions: {
       ind: 0,
@@ -35,6 +35,7 @@ export default {
   },
 
   getBanks() {
+    console.log(db);
     return db.banks;
   },
 

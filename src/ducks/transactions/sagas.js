@@ -79,6 +79,7 @@ export function* getBanks() {
 
     yield put(actions.getBanksSuccess(banks));
   } catch (err) {
+    console.error(err);
     yield put(actions.getBanksFail(err));
   }
 }
